@@ -1,0 +1,8 @@
+#pip install --user --trusted-host Pypi.org --proxy=10.0.0.1:3128 ???
+#api = AIzaSyDc4N8D21iaDD0pAF7ljS5vTPEfh3cIiFo
+from bardapi import Bard
+import os
+import time
+os.environ['BARD_API_KEY'] = "AIzaSyDc4N8D21iaDD0pAF7ljS5vTPEfh3cIiFo"
+response = input('Your prompt: ')
+print(Bard().get_answer(response)['content'])
